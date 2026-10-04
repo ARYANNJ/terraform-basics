@@ -1,4 +1,3 @@
-
 variable "aws_region" {
   type        = string
   description = "AWS deployment region"
@@ -34,24 +33,3 @@ variable "availability_zone" {
   description = "Availability zone for the subnet"
   default     = "" # Optional fallback if not specified in tfvars
 }
-
-variable "instance_ami" {
-  type        = string
-  description = "AMI ID for the EC2 instance"
-  default     = "ami-08e3b3155fc937a94"
-}
-
-variable "instance_type" {
-  type        = string
-  description = "EC2 instance type"
-  default     = "t2.micro" # Optional fallback if not specified in tfvars
-}
-
-variable "bucket_map" {
-  type = map(string)
-  default = {
-    bucket1 = "aryanjadhav-bucket-1"
-    bucket2 = "aryanjadhav-bucket-2"
-  }
-}
-
