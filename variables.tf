@@ -41,12 +41,6 @@ variable "instance_ami" {
   default     = "ami-08e3b3155fc937a94"
 }
 
-variable "instance_type" {
-  type        = string
-  description = "EC2 instance type"
-  default     = "t2.micro" # Optional fallback if not specified in tfvars
-}
-
 variable "bucket_map" {
   type = map(string)
   default = {
